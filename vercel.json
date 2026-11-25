@@ -1,0 +1,13 @@
+{
+  "regions": ["sin1"],
+  "crons": [
+    {
+      "path": "/api/jobs/daily-sweep",
+      "schedule": "0 3 * * *"
+    },
+    {
+      "path": "/api/jobs/data-retention",
+      "schedule": "0 4 * * 0"
+    }
+  ]
+}

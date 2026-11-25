@@ -1,0 +1,52 @@
+{
+  "name": "jurisync",
+  "version": "0.1.0",
+  "private": true,
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "postinstall": "prisma generate",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:bootstrap-admin": "tsx prisma/bootstrapAdmin.ts",
+    "db:seed-demo-accounts": "tsx prisma/seedDemoAccounts.ts",
+    "db:seed-sih": "tsx prisma/seedSih.ts",
+    "db:seed-demo": "tsx prisma/seedSih.ts",
+    "data:prepare-ddl": "tsx scripts/prepareDdlSlice.ts",
+    "data:load-ecourts": "tsx prisma/loadCourtData.ts",
+    "test:demo-path": "node scripts/acceptance/demoPath.mjs"
+  },
+  "dependencies": {
+    "@prisma/client": "6.19.3",
+    "@supabase/supabase-js": "^2.112.4",
+    "argon2": "^0.45.1",
+    "framer-motion": "^13.1.1",
+    "jose": "^6.2.10",
+    "next": "16.3.3",
+    "openai": "^7.8.0",
+    "prisma": "6.19.3",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "resend": "^6.24.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.3",
+    "puppeteer-core": "^23.11.1",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.12",
+    "typescript": "^5",
+    "vitest": "^4.1.11"
+  }
+}
